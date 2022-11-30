@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/schoolListFragment">
+
+   <!--Both fragment navigate using nav controller-->
+    <fragment
+        android:id="@+id/schoolListFragment"
+        android:name="com.app.nycschools.ui.SchoolListFragment"
+        android:label="School List"
+        tools:layout="@layout/fragment_school">
+        <action
+            android:id="@+id/action_schoolListFragment_to_schoolSatFragment"
+            app:destination="@id/schoolSatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolSatFragment"
+        android:name="com.app.nycschools.ui.SchoolSatFragment"
+        android:label="School SAT"
+        tools:layout="@layout/fragment_school_sat" />
+</navigation>
